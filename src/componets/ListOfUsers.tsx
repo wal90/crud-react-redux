@@ -8,6 +8,13 @@ import {
     TableBody,
     BadgeDelta
   } from "@tremor/react";
+
+  const users: {
+    id: string;
+    name: string;
+    email: string;
+    github: string
+  }[] = []
   
   const salesPeople = [
     {
