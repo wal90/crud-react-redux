@@ -60,7 +60,7 @@ import {
     },
   ];
   
-  export default function ListOfUSers() {
+  export default function ListOfUsers() {
     return (
       <Card>
         <Table>
