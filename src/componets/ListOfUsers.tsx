@@ -77,9 +77,9 @@ import {
             {users.map((item) => (
               <TableRow key={item.name}>
                 <TableCell>{item.id}</TableCell>
-                <TableCell>
+                <TableCell style={{ display: "flex", alignItems: "center"}}>
                   <img 
-                    style={{ width: "32px", height: "32px"}}
+                    style={{ width: "32px", height: "32px", borderRadius: "50%"}}
                     src={`https://unavatar.io/github/${item.github}`}
                     alt={item.name}/>
                   {item.name}
