@@ -79,14 +79,15 @@ import {
                 <TableCell>{item.id}</TableCell>
                 <TableCell style={{ display: "flex", alignItems: "center"}}>
                   <img 
-                    style={{ width: "32px", height: "32px", borderRadius: "50%"}}
+                    style={{ width: "32px", height: "32px", borderRadius: "50%", marginRight: "8px"}}
                     src={`https://unavatar.io/github/${item.github}`}
                     alt={item.name}/>
                   {item.name}
                   </TableCell>
                 <TableCell>{item.email}</TableCell>
                 <TableCell>
-                 Acciones
+                 <button>Editar</button>
+                 <button>Eliminar</button>
                 </TableCell>
               </TableRow>
             ))}
