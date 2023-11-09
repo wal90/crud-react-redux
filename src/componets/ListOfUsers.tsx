@@ -77,7 +77,13 @@ import {
             {users.map((item) => (
               <TableRow key={item.name}>
                 <TableCell>{item.id}</TableCell>
-                <TableCell>{item.name}</TableCell>
+                <TableCell>
+                  <img 
+                    style={{ width: "32px", height: "32px"}}
+                    src={`https://unavatar.io/github/${item.github}`}
+                    alt={item.name}/>
+                  {item.name}
+                  </TableCell>
                 <TableCell>{item.email}</TableCell>
                 <TableCell>
                  Acciones
