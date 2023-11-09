@@ -6,6 +6,8 @@ import {
     TableHead,
     TableHeaderCell,
     TableBody,
+    Title,
+    Badge
     
   } from "@tremor/react";
 
@@ -63,6 +65,10 @@ import {
   export default function ListOfUsers() {
     return (
       <Card>
+        <Title>
+          Usuarios
+          <Badge style={{ marginLeft: "8px" }}>{users.length}</Badge>
+        </Title>
         <Table>
           <TableHead>
             <TableRow>
