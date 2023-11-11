@@ -5,6 +5,11 @@ export interface User {
     email: string;
     github: string
 }
+
+export interface UserWhithId extends User {
+    id: string;
+}
+
 export const usersSlice = createSlice({
     name: 'users',
     initialState: ,
