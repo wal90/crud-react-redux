@@ -62,3 +62,5 @@ export const usersSlice = createSlice({
 })
 
 export default usersSlice.reducer
+
+// que es un reducer
