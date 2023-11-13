@@ -63,4 +63,4 @@ export const usersSlice = createSlice({
 
 export default usersSlice.reducer
 
-// que es un reducer
+// que es un reducer ++ recuperan un estado y lo cambian 
