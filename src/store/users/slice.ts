@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+type UserId = string
+
 export interface User {
     name: string;
     email: string;
@@ -7,7 +9,7 @@ export interface User {
 }
 
 export interface UserWhithId extends User {
-    id: string;
+    id: UserId;
 }
 
 const initialState: UserWhithId[] = [{
