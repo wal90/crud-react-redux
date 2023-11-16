@@ -11,13 +11,14 @@ import {
     
   } from "@tremor/react";
 
-  import { useAppSelector } from "../hooks/store";
+  import { useAppSelector,  useAppDispatch } from "../hooks/store";
   import { deleteUserById } from "../store/users/slice";
 
 
   
   export default function ListOfUsers() {
     const users = useAppSelector((state) => state.users); 
+    const dispatch = useAppDispatch()
     return (
       <Card>
         <Title>
