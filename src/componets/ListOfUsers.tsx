@@ -19,6 +19,10 @@ import {
   export default function ListOfUsers() {
     const users = useAppSelector((state) => state.users); 
     const dispatch = useAppDispatch()
+
+    const handleRemoveUser = (id: UserId) => {
+      dispatch(deleteUserById(id))
+    }
     return (
       <Card>
         <Title>
