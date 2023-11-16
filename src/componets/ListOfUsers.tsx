@@ -12,7 +12,7 @@ import {
   } from "@tremor/react";
 
   import { useAppSelector,  useAppDispatch } from "../hooks/store";
-  import { deleteUserById } from "../store/users/slice";
+  import { UserId, deleteUserById } from "../store/users/slice";
 
 
   
