@@ -58,8 +58,9 @@ const initialState: UserWhithId[] = [{
       
 },]
 
+// cada funcion se ejecuta en tres momentos diferentes... recibe la store, una forma para ir a la siguiente y luego la accion
 const persistanceMiddleware = (store) => (next) => (action) => {
-  
+
 }
 export const usersSlice = createSlice({
     name: 'users',
