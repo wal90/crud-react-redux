@@ -57,6 +57,10 @@ const initialState: UserWhithId[] = [{
         github: "joesachs20",
       
 },]
+
+const persistanceMiddleware = (store) => (next) => (action) => {
+  
+}
 export const usersSlice = createSlice({
     name: 'users',
     initialState,
