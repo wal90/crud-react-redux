@@ -65,6 +65,7 @@ const initialState: UserWhithId[] = (() => {
   if (persistedState) {
     return JSON.parse(persistedState).users;
   }
+  return DEFAULT_STATE
 })()
     
 
