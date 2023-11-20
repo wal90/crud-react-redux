@@ -62,10 +62,11 @@ export interface UserWhithId extends User {
 
 const initialState: UserWhithId[] = (() => {
   const persistedState = localStorage.getIten("__redux__state__")
-  if (persistedState) {
-    return JSON.parse(persistedState).users;
-  }
-  return DEFAULT_STATE
+  // if (persistedState) {
+  //   return JSON.parse(persistedState).users;
+  // }
+  // return DEFAULT_STATE
+  return persistedState ? JSON.parse(persistedState).users : DEFAULT_STATE
 })()
     
 
