@@ -61,7 +61,7 @@ export interface UserWhithId extends User {
 }
 
 const initialState: UserWhithId[] = (() => {
-
+  const persistedState = localStorage.getIten("__redux__state__")
 })()
     
 
