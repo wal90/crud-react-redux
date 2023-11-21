@@ -4,7 +4,12 @@ import { addUser } from "../hooks/useUsersActions"
 export function CreateNewUSer () {
 
     const handleSubmit = (event: React.FormEvent<HTMILFormEvent>) => {
-        
+       const form = event.target
+       const formData = new FormData(form)
+       
+       const name = formData.get('name') as string
+       const email = formData.get('email') as string
+       const github = formData.get('github') as string 
     }
     return (
         <Card style={{ marginTop: '16ox' }}>
@@ -12,12 +17,15 @@ export function CreateNewUSer () {
 
             <form onSubmit={handleSubmit} className="">
                 <TextInput
+                name="name"
                 placeholder='Aquí el nombre'
                 />
                 <TextInput
+                name="email"
                 placeholder='Aquí el email'
                 />
                 <TextInput
+                name="github"
                 placeholder='Aquí el usuario de GitHub'
                 />
 
