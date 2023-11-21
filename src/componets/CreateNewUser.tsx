@@ -16,6 +16,14 @@ export function CreateNewUSer () {
                 placeholder='Aquí el usuario de GitHub'
                 />
 
+                <div>
+                    <Button
+                    type="submit"
+                    style={{ marginTop: '16px'}}>
+                        Crear usuario
+                    </Button>
+                </div>
+
             </form>
         </Card>
     )
