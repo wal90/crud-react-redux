@@ -1,9 +1,10 @@
 import { Button, Card, TextInput, Title } from "@tremor/react";
-import { addUser } from "../hooks/useUsersActions"
+import { useUserActions } from "../hooks/useUsersActions";
 
 export function CreateNewUSer () {
-
+    const { addUser } = useUserActions()
     const handleSubmit = (event: React.FormEvent<HTMLFormEvent>) => {
+        event.preventDefault()
        const form = event.target
        const formData = new FormData(form)
        
