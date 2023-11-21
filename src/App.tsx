@@ -1,4 +1,5 @@
 import './App.css';
+import { CreateNewUSer } from './componets/CreateNewUser';
 import { ListOfUsers } from './componets/ListOfUsers'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
    <ListOfUsers />
+   <CreateNewUSer/>
     </>
   )
 }
