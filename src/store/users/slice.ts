@@ -77,6 +77,9 @@ export const usersSlice = createSlice({
     name: 'users',
     initialState,
     reducers: {
+      addNewUser: (state, action: PayloadAction<User>) => {
+
+      },
       deleteUserById: (state, action: PayloadAction<UserId>) => {
         const id = action.payload;
         return state.filter((user) => user.id !== id)
