@@ -1,4 +1,5 @@
 import { Button, Card, TextInput, Title } from "@tremor/react";
+import { addUser } from "../hooks/useUsersActions"
 
 export function CreateNewUSer () {
     return (

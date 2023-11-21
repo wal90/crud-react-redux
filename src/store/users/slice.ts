@@ -93,4 +93,4 @@ export default usersSlice.reducer
 
 // que es un reducer ++ recuperan un estado y lo cambian 
 
-export const { deleteUserById } = usersSlice.actions
+export const { addNewUser, deleteUserById } = usersSlice.actions
