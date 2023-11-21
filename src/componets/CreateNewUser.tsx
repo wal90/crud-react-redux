@@ -3,13 +3,15 @@ import { addUser } from "../hooks/useUsersActions"
 
 export function CreateNewUSer () {
 
-    const handleSubmit = (event: React.FormEvent<HTMILFormEvent>) => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormEvent>) => {
        const form = event.target
        const formData = new FormData(form)
        
        const name = formData.get('name') as string
        const email = formData.get('email') as string
        const github = formData.get('github') as string 
+
+       addUser({ name, email, github})
     }
     return (
         <Card style={{ marginTop: '16ox' }}>
