@@ -2,11 +2,15 @@ import { Button, Card, TextInput, Title } from "@tremor/react";
 import { addUser } from "../hooks/useUsersActions"
 
 export function CreateNewUSer () {
+
+    const handleSubmit = (event: React.FormEvent<HTMILFormEvent>) => {
+        
+    }
     return (
         <Card style={{ marginTop: '16ox' }}>
             <Title>Create New User </Title>
 
-            <form className="">
+            <form onSubmit={handleSubmit} className="">
                 <TextInput
                 placeholder='Aquí el nombre'
                 />
