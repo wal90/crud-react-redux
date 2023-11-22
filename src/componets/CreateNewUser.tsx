@@ -6,6 +6,7 @@ export function CreateNewUSer () {
     const [result, setResult] = useState<'ok' | 'ko' | null>(null)
     const handleSubmit = (event: React.FormEvent<HTMLFormEvent>) => {
         event.preventDefault()
+        setResult(null)
        const form = event.target
        const formData = new FormData(form) // formData ---> sacar los datos de un formulario
        
