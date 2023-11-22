@@ -14,6 +14,10 @@ export function CreateNewUSer () {
        const email = formData.get('email') as string
        const github = formData.get('github') as string 
 
+       if (!name || !email || !github) {
+        return setResult('ko')
+       }
+
        addUser({ name, email, github})
     }
     return (
