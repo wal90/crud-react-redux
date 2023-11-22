@@ -1,4 +1,4 @@
-import { Button, Card, TextInput, Title } from "@tremor/react";
+import { Badge, Button, Card, TextInput, Title } from "@tremor/react";
 import { useUserActions } from "../hooks/useUsersActions";
 import { useState } from "react";
 
@@ -47,6 +47,10 @@ export function CreateNewUSer () {
                     style={{ marginTop: '16px'}}>
                         Crear usuario
                     </Button>
+                    <span>
+                        { result === 'ok' && <Badge color='green'> Guardado correctamente</Badge>}
+                        { result === 'ko' && <Badge color='red'> Error con los campos</Badge>}
+                    </span>
                 </div>
 
             </form>
