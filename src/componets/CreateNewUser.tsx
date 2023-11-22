@@ -3,6 +3,7 @@ import { useUserActions } from "../hooks/useUsersActions";
 
 export function CreateNewUSer () {
     const { addUser } = useUserActions()
+    const [result, setResult] = useState<'ok' | 'ko' | null>(null)
     const handleSubmit = (event: React.FormEvent<HTMLFormEvent>) => {
         event.preventDefault()
        const form = event.target
