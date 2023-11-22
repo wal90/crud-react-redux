@@ -1,5 +1,6 @@
 import { Button, Card, TextInput, Title } from "@tremor/react";
 import { useUserActions } from "../hooks/useUsersActions";
+import { useState } from "react";
 
 export function CreateNewUSer () {
     const { addUser } = useUserActions()
@@ -19,6 +20,8 @@ export function CreateNewUSer () {
        }
 
        addUser({ name, email, github})
+       setResult('ok')
+       form.reset()
     }
     return (
         <Card style={{ marginTop: '16ox' }}>
