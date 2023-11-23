@@ -7,7 +7,7 @@ const persistanceLocalStoregeMiddleware: Middleware = (store) => (next) => (acti
     localStorage.setItem("__redux__state__", JSON.stringify(store.getState()))
 }
 
-const syncWithDataBase: Middleware = store => next => action => {
+const syncWithDataBaseMIddleware: Middleware = store => next => action => {
     const { type, payload } = action
    next(action) 
 }
@@ -16,7 +16,7 @@ export const store = configureStore({
     reducer: {
         users: usersReducer
     },
-    middleware: [persistanceLocalStoregeMiddleware]
+    middleware: [persistanceLocalStoregeMiddleware, syncWithDataBaseMIddleware]
 })
 
 export type RootState = ReturnType<typeof store.getState> // retorna el typo que tiene la funcion
