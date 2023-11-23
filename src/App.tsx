@@ -1,6 +1,7 @@
 import './App.css'
 import { ListOfUsers } from './componets/ListOfUsers';
 import { CreateNewUSer } from './componets/CreateNewUser';
+import { Toaster } from 'sonner';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
    <ListOfUsers />
    <CreateNewUSer/>
+   <Toaster richColors />
     </>
   )
 }
