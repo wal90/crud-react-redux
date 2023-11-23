@@ -17,10 +17,10 @@ const syncWithDataBaseMIddleware: Middleware = store => next => action => {
         method: 'DELETE'
     })
     .then(res => {
-        if (res.ok) toast.sucess()
+        if (res.ok) toast.success(`Usuario ${payload} guardado correctamente`)
     })
-.catch(()=> {
-    console.log('error')
+.catch(err=> {
+    console.log(err)
 })
    }
 }
