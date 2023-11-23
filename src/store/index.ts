@@ -1,10 +1,15 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, type Middleware } from "@reduxjs/toolkit";
 import usersReducer from "./users/slice"
 
 // cada funcion se ejecuta en tres momentos diferentes... recibe la store, una forma para ir a la siguiente y luego la accion
-const persistanceLocalStoregeMiddleware = (store) => (next) => (action) => {
+const persistanceLocalStoregeMiddleware: Middleware = (store) => (next) => (action) => {
     next(action);
     localStorage.setItem("__redux__state__", JSON.stringify(store.getState()))
+}
+
+const syncWithDataBase: Middleware = store => next => action => {
+    const { type, payload } = action
+   next(action) 
 }
 
 export const store = configureStore({
