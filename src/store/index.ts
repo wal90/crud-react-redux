@@ -10,6 +10,7 @@ const persistanceLocalStoregeMiddleware: Middleware = (store) => (next) => (acti
 
 const syncWithDataBaseMIddleware: Middleware = store => next => action => {
     const { type, payload } = action
+    const previousState = store.getState()
    next(action) 
 
    if (type === 'users/deleteUserById') {
