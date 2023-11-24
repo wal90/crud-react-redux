@@ -85,6 +85,9 @@ export const usersSlice = createSlice({
         const id = action.payload;
         return state.filter((user) => user.id !== id)
       },
+      rollbackUser: (state, action: PayloadAction<UserWithId>) => {
+
+      }
     },
    
 })
