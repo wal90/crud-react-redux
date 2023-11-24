@@ -1,5 +1,5 @@
 import { configureStore, type Middleware } from "@reduxjs/toolkit";
-import usersReducer from "./users/slice"
+import usersReducer, { rollbackUser }  from "./users/slice"
 import { toast } from "sonner"
 
 // cada funcion se ejecuta en tres momentos diferentes... recibe la store, una forma para ir a la siguiente y luego la accion
@@ -14,14 +14,19 @@ const syncWithDataBaseMIddleware: Middleware = store => next => action => {
    next(action) 
 
    if (type === 'users/deleteUserById') {
-    const userToRemove = previousState.users.find(user => user.id === payload)
-    fetch(`http://jsonplaceholder.typicode.com/users/${payload}`, {
+    const userIdToRemove = payload
+    const userToRemove = previousState.users.find(user => user.id === userIdToRemove)
+    fetch(`http://jsonplaceholder.typicode.com/users/${userIdToRemove}`, {
         method: 'DELETE'
     })
     .then(res => {
-        if (res.ok) toast.success(`Usuario ${payload} eliminado correctamente`)
-    })
+        if (res.ok) {toast.success(`Usuario ${payload} eliminado correctamente`)}
+        throw new Error('Error al eliminar el usuario')
+    }
+)
 .catch(err=> {
+    toast.error(`Error deleting user ${action.payload}`)
+    if (userToRemove) store.dispatch(rollbackUser(userToRemove))
     console.log(err)
 })
    }
