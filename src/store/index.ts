@@ -25,7 +25,7 @@ const syncWithDataBaseMIddleware: Middleware = store => next => action => {
     }
 )
 .catch(err=> {
-    toast.error(`Error deleting user ${action.payload}`)
+    toast.error(`Error deleting user ${userIdToRemove}`)
     if (userToRemove) store.dispatch(rollbackUser(userToRemove))
     console.log(err)
 })
